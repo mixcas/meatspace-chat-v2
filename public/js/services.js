@@ -7,6 +7,8 @@ var comment = $('#composer-message');
 
 var MAX_LIMIT = 30;
 
+var bloop = new Audio('bloop.mp3');
+
 exports.sendMessage = function (profile, rtc, next) {
   rtc.recordVideo(function (err, frames) {
     if (!err) {
@@ -85,6 +87,8 @@ exports.getMessage = function (data, mutedFP, userIdManager, profile, messages) 
   var eLi = li[0];
 
   messages.append(li);
+
+  bloop.play();
 
   var opts = function (refDir, offsetFn) {
     return {
