@@ -35,6 +35,14 @@ header {
   float: right;
 }
 
+#menu > * {
+  vertical-align: middle;
+}
+
+#menu a {
+  background-color: #fff;
+}
+
 #menu button {
   background-color: #aaa;
   color: #eee;
